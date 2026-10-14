@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-14T07:34:00Z",
+  "title": "Design System: Aster Hospital OS",
+  "extensions": {
+    "breakpoints": [
+      {
+        "name": "mobile-navigation",
+        "value": "800px"
+      },
+      {
+        "name": "stacked-panels",
+        "value": "1100px"
+      }
+    ],
+    "shadows": [
+      {
+        "name": "context",
+        "value": "0 12px 40px #16332c12",
+        "purpose": "Context surfaces"
+      }
+    ],
+    "motion": [
+      {
+        "name": "context-transition",
+        "value": "150ms ease-out",
+        "purpose": "Brief contextual feedback; reduced motion respected"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "description": "Primary button from the shipped system",
+      "html": "<button class=\"ds-primary\">Confirm booking</button>",
+      "css": ".ds-primary{background:#09685e;color:white;border:0;border-radius:6px;padding:9px 13px;font:500 12px Geist,sans-serif;min-height:36px}.ds-primary:hover{background:#07564d}.ds-primary:focus-visible{outline:2px solid #09685e;outline-offset:3px}"
+    },
+    {
+      "name": "Search field",
+      "kind": "input",
+      "description": "Search field from the shipped system",
+      "html": "<input class=\"ds-input\" aria-label=\"Patient search\" placeholder=\"Search patients\">",
+      "css": ".ds-input{border:1px solid #e1e8e7;background:white;border-radius:6px;padding:12px;color:#1b3033;font:14px Geist,sans-serif}.ds-input:focus-visible{outline:2px solid #09685e}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Navigation from the shipped system",
+      "html": "<button class=\"ds-nav\">Patients</button>",
+      "css": ".ds-nav{background:#edf6f3;color:#09685e;padding:11px 12px;border:0;border-radius:7px;font:500 12px Geist,sans-serif}.ds-nav:hover{background:#e2efe9}.ds-nav:focus-visible{outline:2px solid #09685e}"
+    },
+    {
+      "name": "Status",
+      "kind": "chip",
+      "description": "Status from the shipped system",
+      "html": "<span class=\"ds-chip\">Ready</span>",
+      "css": ".ds-chip{background:#edf6f3;color:#09685e;padding:4px 8px;border-radius:4px;font:12px Geist,sans-serif}"
+    },
+    {
+      "name": "Panel",
+      "kind": "card",
+      "description": "Panel from the shipped system",
+      "html": "<section class=\"ds-panel\">Patient commitments</section>",
+      "css": ".ds-panel{background:white;border:1px solid #e1e8e7;border-radius:12px;padding:24px;color:#1b3033;font:14px Geist,sans-serif}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Calm precision",
+    "overview": "A working hospital deserves a quiet interface that makes its next action visible.",
+    "keyCharacteristics": [
+      "Connected workflows with inspectable consequences.",
+      "Restrained semantic colors and explicit status text.",
+      "Patient-facing typography larger than staff metadata."
+    ],
+    "rules": [
+      {
+        "name": "The Named State Rule",
+        "body": "Every status has a readable label alongside its color.",
+        "section": "colors"
+      },
+      {
+        "name": "The Next Action Rule",
+        "body": "Assigned work remains ahead of supporting overview content on small screens.",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "Do keep synthetic data and simulated behavior clearly labeled."
+    ],
+    "donts": [
+      "Don't treat role previews as access controls."
+    ]
+  }
+}
